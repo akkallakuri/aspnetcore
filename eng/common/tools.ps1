@@ -139,7 +139,6 @@ function InitializeDotNetCli([bool]$install) {
         InstallDotNetSdk $dotnetRoot $dotnetSdkVersion
       } else {
         Write-PipelineTelemetryError -Category "InitializeToolset" -Message "Unable to find dotnet with SDK version '$dotnetSdkVersion'"
-        ExitWithExitCode 1
       }
     }
 
